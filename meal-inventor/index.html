@@ -38,6 +38,18 @@
       main {
         padding: 20px;
       }
+      form {
+        margin-top: 20px;
+      }
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      form button {
+        padding: 10px 20px;
+      }
     </style>
   </head>
   <body>
@@ -54,11 +66,19 @@
           help! Please describe your issue in detail and we'll do our best to
           assist you.
         </p>
-        <p>
-          To submit a support request, please create a new issue in this
-          repository. You can also look through existing issues to see if
-          someone else has already reported the same problem.
-        </p>
+
+        <form action="https://formspree.io/f/mvojglpg" method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
       </div>
     </main>
   </body>
